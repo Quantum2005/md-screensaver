@@ -44,7 +44,7 @@ function changeDirection(index, value) {
 function getLogoURL() {
     // return the default logo if the parameter is not set
     if (!params.has("logo")) {
-        return "/logos/default.svg"
+        return "/logos/image_2025-04-09_043742928.png"
     }
     
     return params.get("logo");
@@ -67,14 +67,14 @@ function getLogo(url) {
 
     // if the image is not an SVG, return the default logo
     if (image.querySelector("parsererror")) {
-        return getLogo("/logos/default.svg");
+        return getLogo("/logos/image_2025-04-09_043742928.png");
     }
     
     image = image.querySelector("svg");
 
     // if the image is null, return the default logo
     if (image == null) {
-        return getLogo("/logos/default.svg");
+        return getLogo("/logos/image_2025-04-09_043742928.png");
     }
     
     // filter any color attributes from the SVG
